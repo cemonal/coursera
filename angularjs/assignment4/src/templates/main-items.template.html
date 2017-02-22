@@ -1,0 +1,13 @@
+<ol class="breadcrumb">
+  <li><a ui-sref="home" style="cursor: pointer;">Home</a></li>
+  <li><a ui-sref="categories" style="cursor: pointer;">Categories</a></li>
+  <li class="active">{{ itemList.category.name }}</li>
+</ol>
+<div class="jumbotron">
+  <h3><span class="label label-info">{{ itemList.category.short_name }}</span>&nbsp;-&nbsp;{{ itemList.category.name }}</h3>
+  <p>
+    {{ itemList.category.special_instructions }}
+  </p>
+</div>
+<items items="itemList.items"></items>
+<ui-view></ui-view>

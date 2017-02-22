@@ -1,0 +1,47 @@
+<table class="table table-striped">
+  <thead>
+<tr>
+  <th>
+    Short Name
+  </th>
+  <th>
+    Name
+  </th>
+  <th>
+    Description
+  </th>
+  <th>
+    Price Small
+  </th>
+  <th>
+    Price Large
+  </th>
+</tr>
+  </thead>
+  <tbody>
+<tr ng-repeat="item in $ctrl.items">
+  <td>
+    <span class="label label-info">{{item.short_name }}</span>
+  </td>
+  <td>
+    {{ item.name }}
+  </td>
+  <td>
+    {{ item.description }}
+  </td>
+  <td>
+    {{ item.price_small }}
+  </td>
+  <td>
+    {{ item.price_large }}
+  </td>
+</tr>
+  </tbody>
+  <tfoot>
+<tr>
+  <td colspan="5">
+    Total Count: {{ $ctrl.items.length }}
+  </td>
+</tr>
+  </tfoot>
+</table>
