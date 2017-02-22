@@ -1,0 +1,55 @@
+<div class="container">
+   <div class="row" ng-if="!myInfoCtrl.registered">
+      <div class="col-md-12">
+         <div class="text-centered">
+            Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a><br><br><br><br><br><br><br><br><br><br><br><br>
+         </div>
+      </div>
+   </div>
+   <div class="row" ng-if="myInfoCtrl.registered">
+      <div class="col-md-6">
+         <div class="form-horizontal">
+            <div class="form-group">
+               <label class="col-sm-3 control-label">First name:</label>
+               <div class="col-sm-7">
+                  <p class="form-control-static">{{ myInfoCtrl.info.firstName }}</p>
+               </div>
+            </div>
+            <div class="form-group">
+               <label class="col-sm-3 control-label">Last name:</label>
+               <div class="col-sm-7">
+                  <p class="form-control-static">{{ myInfoCtrl.info.lastName }}</p>
+               </div>
+            </div>
+            <div class="form-group">
+               <label class="col-sm-3 control-label">Favorite Dish:</label>
+               <div class="col-sm-7">
+                  <p class="form-control-static">{{ myInfoCtrl.info.favoriteDish.name }} ({{ myInfoCtrl.info.favoriteDish.short_name }})</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6">
+         <div class="form-horizontal">
+            <div class="form-group">
+               <label class="col-sm-3 control-label">E-mail:</label>
+               <div class="col-sm-7">
+                  <p class="form-control-static">{{ myInfoCtrl.info.email }}</p>
+               </div>
+            </div>
+            <div class="form-group">
+               <label class="col-sm-3 control-label">Phone:</label>
+               <div class="col-sm-7">
+                  <p class="form-control-static">{{ myInfoCtrl.info.phone }}</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-12">
+        <div class="pull-left">
+          <img class="img-responsive" style="padding:0 10px 5px 0;" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.info.favoriteDish.short_name}}.jpg" alt="{{myInfoCtrl.info.favoriteDish.name}}">
+        </div>
+        {{myInfoCtrl.info.favoriteDish.description}}
+      </div>
+   </div>
+</div>
